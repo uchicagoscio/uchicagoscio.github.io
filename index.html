@@ -30,39 +30,7 @@
             color: white;
         }
 
-        .logo-section {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 10;
-        }
 
-        .vita-excolatur {
-            background: #8B4513;
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            transform: rotate(-5deg);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .vita-excolatur:hover {
-            transform: rotate(-2deg) scale(1.05);
-        }
-
-        .vita-excolatur h3 {
-            font-size: 24px;
-            margin-bottom: 5px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .phoenix-icon {
-            width: 60px;
-            height: 60px;
-            margin-top: 10px;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-        }
 
         .main-title {
             font-size: 4rem;
@@ -232,9 +200,51 @@
             .cards-section {
                 grid-template-columns: 1fr;
             }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+<nav class="nav-menu">
+            <a href="#home" class="nav-item">Home</a>
+            <a href="#invitationals" class="nav-item">Invitationals</a>
+            <a href="#community" class="nav-item">In The Community</a>
+            <a href="#memories" class="nav-item">Memories</a>
+            <a href="#about" class="nav-item">About Us</a>
+        </nav>
 
-            .rotating-images {
-                flex-direction: column;
-                align-items: center;
-            }
+        <h1 class="main-title">uchicago</h1>
+        <h2 class="subtitle">science olympiad</h2>
+
+        <div class="image-gallery">
+            <div class="gallery-note">
+                Photo gallery featuring our community events and educational programs
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="cards-section">
+            <div class="info-card">
+                <h3 class="card-title">Community Impact</h3>
+                <div class="card-content">
+                    Committed to increasing STEM opportunities in Chicago, we are launching mentorship opportunities to Chicago Public Schools looking to start a team and partnering with the Illinois Science Olympiad in a State-side clinic.
+                </div>
+                <div class="center-buttons">
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3 class="card-title">2026 Invitationals</h3>
+                <div class="card-content">
+                    Held at the University of Chicago's beautiful campus, our annual division B and C invitationals are completely student-run and showcase the university experience.
+                </div>
+                <div class="center-buttons">
+                    <a href="#" class="btn">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
