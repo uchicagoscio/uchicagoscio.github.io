@@ -48,6 +48,25 @@
             padding: 60px 50px;
             background: #f9f9f9;
             text-align: center;
+            position: relative;
+        }
+
+        .overlay-logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 20;
+            max-width: 150px;
+            max-height: 200px;
+            width: auto;
+            height: auto;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4));
+            transition: transform 0.3s ease;
+        }
+
+        .overlay-logo:hover {
+            transform: translateY(-50%) scale(1.05);
         }
 
         .gallery-title {
@@ -279,8 +298,9 @@
             text-align: center;
         }
 
+        /* Contact Panel Styles */
         .contact-panel {
-            background: #404040;
+            background: #4a4a4a;
             color: white;
             padding: 40px;
             text-align: center;
@@ -325,6 +345,12 @@
                 grid-template-columns: 1fr;
             }
 
+            .overlay-logo {
+                max-width: 100px;
+                max-height: 120px;
+                left: 10px;
+            }
+
             .contact-panel {
                 padding: 30px 20px;
                 flex-direction: column;
@@ -351,6 +377,9 @@
     </div>
 
     <div class="image-gallery">
+        <!-- Overlay Logo -->
+        <img src="images/logo.png" alt="Science Olympiad Club Logo" class="overlay-logo">
+        
         <div class="carousel-container">
             <div class="carousel-track" id="carouselTrack">
                 <div class="carousel-slide">
@@ -406,8 +435,9 @@
         </div>
     </div>
 
+    <!-- Contact Panel -->
     <div class="contact-panel">
-        <img src="images/uchicago_logo.png" alt="UChicago Logo" class="contact-image">
+        <img src="images/uchicago-logo.png" alt="UChicago Logo" class="contact-image">
         <div class="contact-text">
             Reynolds Club RC001, University of Chicago Science Olympiad<br>
             5706 S. University Ave, Chicago, IL, 60637<br>
