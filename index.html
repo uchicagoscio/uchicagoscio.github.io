@@ -31,8 +31,13 @@
         }
 
         .logo-image {
-            width: 60vw;  /* 90% of viewport width */
+            max-width: 600px;
+            max-height: 300px;
+            width: auto;
             height: auto;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 8px 16px rgba(0,0,0,0.5));
+            transition: transform 0.3s ease;
         }
 
         .logo-image:hover {
