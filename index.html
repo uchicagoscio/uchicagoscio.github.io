@@ -30,7 +30,7 @@
             color: white;
         }
 
-        .title-image {
+        .logo-image {
             max-width: 600px;
             max-height: 300px;
             width: auto;
@@ -40,7 +40,7 @@
             transition: transform 0.3s ease;
         }
 
-        .title-image:hover {
+        .logo-image:hover {
             transform: scale(1.05);
         }
 
@@ -49,8 +49,7 @@
         .image-gallery {
             padding: 60px 50px;
             background: #f9f9f9;
-            text-align: left;
-            position: relative;
+            text-align: center;
         }
 
         .gallery-title {
@@ -58,62 +57,15 @@
             color: #8B4513;
             margin-bottom: 40px;
             font-weight: bold;
-            text-align: center;
         }
 
         .carousel-container {
-            max-width: 700px;
-            margin: 0;
-            margin-left: 50px;
+            max-width: 1000px;
+            margin: 0 auto;
             position: relative;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        }
-
-        .logo {
-            position: absolute;
-            right: -100px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 300px;
-            height: 400px;
-            z-index: 5;
-            filter: drop-shadow(0 10px 25px rgba(0,0,0,0.3));
-        }
-
-        .logo-background {
-            width: 100%;
-            height: 100%;
-            background: ;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .shield-title {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .shield-subtitle {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .shield-icon {
-            font-size: 3rem;
-            margin: 15px 0;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
         }
 
         .carousel-track {
@@ -363,34 +315,30 @@
             <a href="#about" class="nav-item">About Us</a>
         </nav>
 
-        <img src="images/logo.png" alt="UChicago Science Olympiad" class="logo-image">
+        <img src="images/title.png" alt="UChicago Science Olympiad" class="logo-image">
 
 
     </div>
 
     <div class="image-gallery">
-        <h2 class="gallery-title">Our Community</h2>
         <div class="carousel-container">
             <div class="carousel-track" id="carouselTrack">
                 <div class="carousel-slide">
-                    <img src="images/chemistry-lab.jpg" alt="Students in chemistry lab" class="slide-image">
+                    <img src="images/trial_events.png" alt="UChicago exclusive trial events" class="slide-image">
                     <div class="slide-overlay">
-                        <div class="slide-title">Chemistry & Biology Learning</div>
-                        <div class="slide-description">Students engage in hands-on STEM activities</div>
+                        <div class="slide-title">Motivating students through exclusive UChicago trial events</div>
                     </div>
                 </div>
                 <div class="carousel-slide">
-                    <img src="images/trial-events.jpg" alt="UChicago trial events" class="slide-image">
+                    <img src="images/stem_outreach.png" alt="STEM outreach" class="slide-image">
                     <div class="slide-overlay">
-                        <div class="slide-title">UChicago Trial Events</div>
-                        <div class="slide-description">Exclusive practice opportunities for participants</div>
+                        <div class="slide-title">Dedicated to increasing scientific inquiry and diversity in STEM</div>
                     </div>
                 </div>
                 <div class="carousel-slide">
-                    <img src="images/classroom.jpg" alt="Interactive classroom learning" class="slide-image">
+                    <img src="images/labs.png" alt="Rigorous lab events" class="slide-image">
                     <div class="slide-overlay">
-                        <div class="slide-title">Interactive Learning</div>
-                        <div class="slide-description">Engaging classroom experiences and mentorship</div>
+                        <div class="slide-title">Rigorous lab events written by students directly involved in research</div>
                     </div>
                 </div>
             </div>
