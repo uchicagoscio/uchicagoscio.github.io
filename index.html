@@ -17,12 +17,11 @@
             color: #333;
         }
 
-        /* Header Section */
         .header-section {
             position: relative;
             height: 70vh;
             background: linear-gradient(rgba(139, 69, 19, 0.3), rgba(139, 69, 19, 0.5)), 
-                        url('images/banner.png') center/cover;
+            url('images/banner.png') center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -45,7 +44,144 @@
             transform: scale(1.05);
         }
 
-        /* Navigation */
+        .image-gallery {
+            padding: 60px 50px;
+            background: #f9f9f9;
+            text-align: center;
+            position: relative;
+        }
+
+        .overlay-logo {
+            position: absolute;
+            left: -200px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 20;
+           	width: 600px;
+            height: auto;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4));
+            transition: transform 0.3s ease;
+        }
+
+        .overlay-logo:hover {
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .gallery-title {
+            font-size: 2rem;
+            color: #8B4513;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .carousel-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            left: 60px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 400px;
+            position: relative;
+        }
+
+        .slide-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2rem;
+        }
+
+        .slide-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 30px;
+            text-align: right;
+        }
+
+        .slide-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: #800000;
+            transform: scale(1.3);
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.8);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #8B4513;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .carousel-nav:hover {
+            background: rgba(255,255,255,0.95);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-nav.prev {
+            display: none;
+        }
+
+        .carousel-nav.next {
+            right: 20px;
+        }
+
         .nav-menu {
             position: absolute;
             top: 50px;
@@ -66,7 +202,6 @@
             letter-spacing: 1px;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            position: relative;
         }
 
         .nav-item:hover {
@@ -75,8 +210,7 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
         }
-
-        /* Dropdown Styles */
+        
         .nav-item.dropdown::after {
             content: " ▼";
             font-size: 0.7rem;
@@ -118,7 +252,87 @@
             max-height: 500px;
         }
 
-        /* Contact Panel */
+        .content-section {
+            padding: 80px 50px;
+            background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+        }
+
+        .cards-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #800000, #A4343A, #B46A55);
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .card-title {
+            font-size: 2rem;
+            color: #800000;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .card-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #800000, #A4343A);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+            margin: 10px;
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #8C161E, #B46A55);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+        }
+
+        .center-buttons {
+            text-align: center;
+        }
+
         .contact-panel {
             background: #4a4a4a;
             color: white;
@@ -153,39 +367,42 @@
                 margin-top: 20px;
             }
 
-            .logo-image {
-                max-width: 300px;
-                max-height: 150px;
+            .main-title {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.8rem;
+            }
+
+            .cards-section {
+                grid-template-columns: 1fr;
+            }
+
+            .overlay-logo {
+                max-width: 100px;
+                max-height: 120px;
+                left: 10px;
             }
 
             .contact-panel {
                 padding: 30px 20px;
+                flex-direction: column;
             }
 
             .contact-image {
                 max-width: 150px;
                 max-height: 100px;
             }
-
-            .nav-item.dropdown::after {
-                display: none;
-            }
-
-            .dropdown-content {
-                position: static;
-                max-height: none;
-                opacity: 1;
-            }
         }
     </style>
 </head>
 <body>
-
     <div class="header-section">
         <nav class="nav-menu">
             <a href="index.html" class="nav-item">Home</a>
             <a href="invitationals.html" class="nav-item">Invitationals</a>
-
+            
             <div class="nav-item dropdown">
                 In The Community
                 <div class="dropdown-content">
@@ -193,13 +410,70 @@
                     <a href="southside.html">Southside Clinic</a>
                 </div>
             </div>
-
+            
             <a href="memories.html" class="nav-item">Memories</a>
-     
             <a href="about.html" class="nav-item">About Us</a>
         </nav>
 
         <img src="images/title.png" alt="UChicago Science Olympiad" class="logo-image">
+    </div>
+
+    <div class="image-gallery">
+        <img src="images/logo.png" alt="Science Olympiad Club Logo" class="overlay-logo">
+        
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide">
+                    <img src="images/trial_events.png" alt="UChicago exclusive trial events" class="slide-image">
+                    <div class="slide-overlay">
+                        <div class="slide-title">Motivating students through exclusive UChicago trial events</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/stem_outreach.png" alt="STEM outreach" class="slide-image">
+                    <div class="slide-overlay">
+                        <div class="slide-title">Dedicated to increasing scientific inquiry and diversity in STEM</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/labs.png" alt="Rigorous lab events" class="slide-image">
+                    <div class="slide-overlay">
+                        <div class="slide-title">Rigorous lab events written by students directly involved in research</div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-nav prev" onclick="previousSlide()">‹</button>
+            <button class="carousel-nav next" onclick="nextSlide()">›</button>
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator active" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="cards-section">
+            <div class="info-card">
+                <h3 class="card-title">Community Impact</h3>
+                <div class="card-content">
+                    Committed to increasing STEM opportunities in Chicago, we are launching mentorship opportunities to Chicago Public Schools looking to start a team and partnering with the Illinois Science Olympiad in a Southside clinic.
+                </div>
+                <div class="center-buttons">
+                    <a href="community.html" class="btn">Learn More</a>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3 class="card-title">2026 Invitationals</h3>
+                <div class="card-content">
+                    Held at the University of Chicago's beautiful campus, our annual division B and C invitationals are completely student-run and showcase the university experience.
+                </div>
+                <div class="center-buttons">
+                    <a href="invitationals.html" class="btn">Register</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="contact-panel">
@@ -211,5 +485,41 @@
         </div>
     </div>
 
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const track = document.getElementById('carouselTrack');
+
+        function showSlide(index) {
+            // Remove active class from all indicators
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Add active class to current indicator
+            indicators[index].classList.add('active');
+            
+            // Move the track
+            track.style.transform = `translateX(-${index * 100}%)`;
+            
+            slideIndex = index;
+        }
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % slides.length;
+            showSlide(slideIndex);
+        }
+
+        function previousSlide() {
+            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+            showSlide(slideIndex);
+        }
+
+        function currentSlide(index) {
+            showSlide(index - 1);
+        }
+
+        // Auto-rotate images every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
 </body>
 </html>
