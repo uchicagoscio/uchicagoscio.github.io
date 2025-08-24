@@ -118,6 +118,79 @@
             max-height: 500px;
         }
 
+        /* NEW: Text Section */
+        .text-section {
+            background: #f8f8f8;
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .text-section h2 {
+            color: #800000;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .text-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .text-section .highlight {
+            color: #800000;
+            font-weight: bold;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 600px;
+            margin: 40px auto 0;
+            gap: 30px;
+        }
+
+        .section-button {
+            background: #800000;
+            color: white;
+            padding: 18px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
+            border: 2px solid #800000;
+            flex: 1;
+            text-align: center;
+        }
+
+        .section-button:hover {
+            background: white;
+            color: #800000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(128, 0, 0, 0.4);
+        }
+
+        .section-button.secondary {
+            background: white;
+            color: #800000;
+            border: 2px solid #800000;
+        }
+
+        .section-button.secondary:hover {
+            background: #800000;
+            color: white;
+        }
+
         /* Contact Panel */
         .contact-panel {
             background: #4a4a4a;
@@ -156,6 +229,29 @@
             .logo-image {
                 max-width: 300px;
                 max-height: 150px;
+            }
+
+            .text-section {
+                padding: 40px 20px;
+            }
+
+            .text-section h2 {
+                font-size: 2rem;
+            }
+
+            .text-section p {
+                font-size: 1.1rem;
+            }
+
+            .button-container {
+                flex-direction: column;
+                gap: 20px;
+                max-width: 100%;
+            }
+
+            .section-button {
+                padding: 16px 30px;
+                font-size: 0.9rem;
             }
 
             .contact-panel {
@@ -225,13 +321,19 @@
             5706 S. University Ave.
             Chicago, IL 60637
         <p>
-    
+        
+        <div class="button-container">
+            <a href="https://forms.gle/HsSm3sdU7Mb7t65h8" class="section-button">Register: Division B</a>
+            <a href="https://forms.gle/QNKYyAMJ8dA3uJHk8" class="section-button secondary">Register: Division C</a>
+        </div>
+    </div>
+
     <div class="contact-panel">
         <img src="../images/uchicago_logo.png" alt="UChicago Logo" class="contact-image">
         <div class="contact-text">
             Reynolds Club RC001, University of Chicago Science Olympiad<br>
             5706 S. University Ave, Chicago, IL, 60637<br>
-            uchicagoscio@gmail.com
+            uchicagescio@gmail.com
         </div>
     </div>
 
