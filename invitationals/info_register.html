@@ -126,13 +126,6 @@
             margin: 0 auto;
         }
 
-        .text-section h2 {
-            color: #800000;
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            font-weight: bold;
-        }
-
         .text-section p {
             font-size: 1.2rem;
             line-height: 1.8;
@@ -179,12 +172,20 @@
             box-shadow: 0 8px 25px rgba(128, 0, 0, 0.4);
         }
 
+        .text-section h2 {
+            color: #800000;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-align: center; /* Center headers */
+        }
+
         .content-container {
             display: flex;
             align-items: flex-start;
-            gap: 40px; /* space between image and text */
+            gap: 40px;
             justify-content: center;
-            margin-bottom: 40px; /* space before buttons */
+            margin: 30px 0;
         }
 
         .side-image {
@@ -199,18 +200,19 @@
             text-align: left;
         }
 
-        @media (max-width: 768px) {
-            .content-container {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            }
-            .side-image {
-                max-width: 100%;
-                margin-bottom: 20px;
-            }
+        .text-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
         }
 
+        .address-block {
+            text-align: center; /* Center the address separately */
+            font-size: 1.1rem;
+            color: #444;
+            margin-top: 20px;
+        }
 
         /* Contact Panel */
         .contact-panel {
@@ -328,33 +330,37 @@
     </div>
 
     <div class="text-section">
-        <div class="content-container">
+    <h2>The Division B tournament will tentatively be held on January 10th, 2026.</h2>
+    <h2>The Division C tournament will tentatively be held on January 17th, 2026.</h2>
 
-            <div class="text-content">
-                <h2>The Division B tournament will tentatively be held on January 10th, 2026.</h2>
-                <h2>The Division C tournament will tentatively be held on January 17th, 2026.</h2>
-                <img src="../images/2025_photo.png" alt="Tournament" class="side-image">
-                <p>
-                    Both invitationals will be held fully in-person on the University of Chicago campus in Chicago, IL. 
-                    Events will be run by University of Chicago students, faculty, and alumni. All events will follow the Nationals
-                    rules. Scoring will be done with no Junior Varsity/Varsity distinction. Schools may register no more
-                    than 3 teams with no more than 15 students per team. Please fill out the registration form once for each team.
-                    Registration is $130/team for non Chicago Public Schools and $50/team for Chicago Public Schools.<br>
-                    <br>
-                    Please make payments by check to the University of Chicago Science Olympiad to the following address:<br>
-                    Reynolds Club RC001<br>
-                    University of Chicago Science Olympiad<br>
-                    5706 S. University Ave.<br>
-                    Chicago, IL 60637
-                </p>
+    <div class="content-container">
+        <img src="../images/2025_photo.png" alt="Tournament" class="side-image">
+
+        <div class="text-content">
+            <p>
+                Both invitationals will be held fully in-person on the University of Chicago campus in Chicago, IL. 
+                Events will be run by University of Chicago students, faculty, and alumni. All events will follow the Nationals
+                rules. Scoring will be done with no Junior Varsity/Varsity distinction. Schools may register no more
+                than 3 teams with no more than 15 students per team. Please fill out the registration form once for each team.
+                Registration is $130/team for non Chicago Public Schools and $50/team for Chicago Public Schools.
+            </p>
+            <div class="address-block">
+                Please make payments by check to the University of Chicago Science Olympiad to the following address:<br>
+                Reynolds Club RC001<br>
+                University of Chicago Science Olympiad<br>
+                5706 S. University Ave.<br>
+                Chicago, IL 60637
             </div>
         </div>
-
-        <div class="button-container">
-            <a href="https://forms.gle/HsSm3sdU7Mb7t65h8" class="section-button">Register: Division B</a>
-            <a href="https://forms.gle/QNKYyAMJ8dA3uJHk8" class="section-button">Register: Division C</a>
-        </div>
     </div>
+
+    <div class="button-container">
+        <a href="https://forms.gle/HsSm3sdU7Mb7t65h8" class="section-button">Register: Division B</a>
+        <a href="https://forms.gle/QNKYyAMJ8dA3uJHk8" class="section-button">Register: Division C</a>
+    </div>
+        
+</div>
+
 
 
     <div class="contact-panel">
